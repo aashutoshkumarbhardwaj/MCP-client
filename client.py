@@ -56,7 +56,7 @@ if "initialized" not in st.session_state:
     # 1) LLM
     st.session_state.llm = ChatOpenAI(
     model="openai/gpt-oss-20b",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
+    api_key=st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY"),
     base_url="https://openrouter.ai/api/v1",
     temperature=0,
 )
