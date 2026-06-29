@@ -55,7 +55,7 @@ load_dotenv()
 if "initialized" not in st.session_state:
     # 1) LLM
     st.session_state.llm = ChatOpenAI(
-    model="anthropic/claude-sonnet-4",
+    model="deepseek/deepseek-chat-v3-0324",
     api_key=st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY"),
     base_url="https://openrouter.ai/api/v1",
     temperature=0,
