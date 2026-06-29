@@ -59,6 +59,7 @@ if "initialized" not in st.session_state:
     api_key=st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY"),
     base_url="https://openrouter.ai/api/v1",
     temperature=0,
+    max_tokens=512
 )
 
     # 2) MCP tools
